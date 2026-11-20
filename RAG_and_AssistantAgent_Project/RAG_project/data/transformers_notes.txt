@@ -1,0 +1,19 @@
+Transformers — Course Notes
+
+1. Self-Attention
+Self-attention allows each token in a sequence to compare itself with other tokens and build a contextual representation. Each token is projected into a Query (Q), Key (K), and Value (V). Attention scores are computed from the query-key compatibility, scaled by the square root of the key dimension, passed through softmax, and used to combine the values.
+
+2. Multi-Head Attention
+Multi-head attention runs several attention heads in parallel. Each head can learn to focus on different relationships or representation subspaces. The head outputs are concatenated and passed through a learned linear projection. This gives the model several ways to relate tokens instead of relying on one attention operation.
+
+3. Positional Encoding
+The self-attention operation by itself does not represent the order of tokens. Positional information is therefore added to token embeddings so the model can distinguish different token positions and use word order.
+
+4. Transformer Encoder
+The original Transformer encoder is composed of six identical layers stacked one after another. Each encoder layer contains a multi-head self-attention sublayer and a position-wise feed-forward network, with residual connections and layer normalization around the sublayers.
+
+5. Transformer Decoder
+The original Transformer decoder is also composed of six identical layers. It uses masked multi-head self-attention, encoder-decoder attention, and a position-wise feed-forward network.
+
+6. Retrieval-Augmented Generation (RAG)
+RAG retrieves relevant passages from an external document collection and provides those passages to a language model as context. The model should ground its answer in the retrieved context and indicate the sources used.
