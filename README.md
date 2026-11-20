@@ -242,4 +242,4 @@ Test both MMR and Similarity retrieval modes.
 | Grades for Omar? | Returns a polite message that Omar was not found. |
 | Calculate 2 ** 10. | Returns 1024. |
 
-*Built with Python, LangChain, LangGraph, OpenAI, and ChromaDB.*
+
